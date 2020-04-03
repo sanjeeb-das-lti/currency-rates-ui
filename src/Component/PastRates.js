@@ -68,10 +68,6 @@ class pastRates extends Component {
     return (
       <div>
         <h4>Past Rates</h4>
-        {/* {this.state.rateLists.map((val, i) => {
-          const value = JSON.parse(val);
-          return <p key={i}>{value.rates.GBP}</p>;
-        })} */}
 
         <table>
           <thead>

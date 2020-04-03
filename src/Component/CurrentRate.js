@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import "./currentRate.css";
-import PastRates from "./PastRates";
 
 class currentRate extends Component {
   state = { date: "", ratesGBP: "", ratesHKD: "", ratesUSD: "", message: "" };
@@ -27,6 +26,8 @@ class currentRate extends Component {
 
   getPastRates = () => {
     this.setState({ showPastRates: true });
+
+    window.open("/pastRate");
   };
 
   render() {
@@ -52,11 +53,11 @@ class currentRate extends Component {
             <td>{this.state.ratesHKD}</td>
           </tr>
         </table>
+        <br />
 
         <button type="button" onClick={this.getPastRates}>
           History Rates
         </button>
-        {this.state.showPastRates ? <PastRates /> : null}
       </div>
     );
   }
